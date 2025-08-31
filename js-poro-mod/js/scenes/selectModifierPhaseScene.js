@@ -64,7 +64,12 @@ export class SelectModifierPhaseScene extends BaseScene {
 
         // Update Lock text
         let uiHandler = this.currentScene.ui.getHandler();
-        uiHandler?.updateLockRaritiesText();
+        if (
+            uiHandler &&
+            typeof uiHandler.updateLockRaritiesText === "function"
+        ) {
+            uiHandler.updateLockRaritiesText();
+        }
     }
 
     rerollPhase(tier, lock, rollCount) {
@@ -83,9 +88,10 @@ export class SelectModifierPhaseScene extends BaseScene {
 
         // showToast(message);
         // console.log(this.currentScene.phaseManager.currentPhase.typeOptions); // currentPhase.typeOptions[0].type.tier
-        let currentItemsTiers = this.currentScene.phaseManager.currentPhase.typeOptions.map(
-            (e) => e.type.tier
-        );
+        let currentItemsTiers =
+            this.currentScene.phaseManager.currentPhase.typeOptions.map(
+                (e) => e.type.tier
+            );
         // showToast(currentItemsTiers.join(", "));
 
         this.lockRarities(lock);
