@@ -76,6 +76,7 @@ export class SelectModifierPhaseScene extends BaseScene {
             )?.stackCount ?? 0);
 
         let uiHandler = this.currentScene.ui.getHandler();
+        showToast("T1");
         let currentItemsTiers = uiHandler.options.map(
             (e) => e.modifierTypeOption.type.tier
         );
@@ -105,6 +106,7 @@ export class SelectModifierPhaseScene extends BaseScene {
         ];
 
         // Old code
+        showToast("T2");
         let newModifierTiers =
             lock === true && tier === null
                 ? currentItemsTiers
