@@ -75,16 +75,18 @@ export class SelectModifierPhaseScene extends BaseScene {
                 (o) => o.constructor.name === "ExtraModifierModifier"
             )?.stackCount ?? 0);
 
-        let uiHandler = this.currentScene.ui.getHandler();
-        console.log(uiHandler);
-        const message = Object.entries(uiHandler)
-            .map(([key, value]) => `${key}`)
-            .join(', '); // separate each property by a new line
+        // let uiHandler = this.currentScene.ui.getHandler();
+        // console.log(uiHandler);
+        // const message = Object.entries(uiHandler)
+        //     .map(([key, value]) => `${key}`)
+        //     .join(', '); // separate each property by a new line
 
-        showToast(message);
-        let currentItemsTiers = uiHandler.options.map(
-            (e) => e.modifierTypeOption.type.tier
+        // showToast(message);
+        // console.log(this.currentScene.phaseManager.currentPhase.typeOptions); // currentPhase.typeOptions[0].type.tier
+        let currentItemsTiers = this.currentScene.phaseManager.currentPhase.typeOptions.map(
+            (e) => e.type.tier
         );
+        // showToast(currentItemsTiers.join(", "));
 
         this.lockRarities(lock);
 
