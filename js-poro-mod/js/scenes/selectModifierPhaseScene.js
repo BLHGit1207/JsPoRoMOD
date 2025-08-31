@@ -12,7 +12,7 @@ export class SelectModifierPhaseScene extends BaseScene {
                 Phaser.Display.Canvas.CanvasPool.pool[0].parent.game.scene.keys
                     .battle.gameMode.modeId !== 3
             ) {
-                this.currentScene.getParty().forEach((pokemon) => {
+                this.currentScene.getPlayerParty().forEach((pokemon) => {
                     pokemon.luck = luck;
                 });
                 // this.currentScene.hideLuckText(250); // Since i cant update the text properly atm!
@@ -119,7 +119,7 @@ export class SelectModifierPhaseScene extends BaseScene {
         }
 
         this.currentScene.reroll = true;
-        this.currentScene.unshiftPhase(
+        this.currentScene.phaseManager.unshiftPhase(
             new this.currentPhase.constructor(
                 rollCount, // Bug Credit: https://www.youtube.com/@Odou
                 newModifierTiers

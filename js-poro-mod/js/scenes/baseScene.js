@@ -10,11 +10,11 @@ export class BaseScene {
     }
 
     get currentPhase() {
-        return this.currentScene.currentPhase;
+        return this.currentScene.phaseManager.currentPhase;
     }
 
     get currentPhaseName() {
-        return this.currentPhase.constructor.name;
+        return this.currentPhase.phaseName;
     }
 
     playBuySound(sound_name) {
