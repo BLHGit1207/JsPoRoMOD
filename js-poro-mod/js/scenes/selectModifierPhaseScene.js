@@ -76,8 +76,9 @@ export class SelectModifierPhaseScene extends BaseScene {
             )?.stackCount ?? 0);
 
         let uiHandler = this.currentScene.ui.getHandler();
+        console.log(uiHandler);
         const message = Object.entries(uiHandler)
-            .map(([key, value]) => `${key}: ${value}`)
+            .map(([key, value]) => `${key}`)
             .join(', '); // separate each property by a new line
 
         showToast(message);
