@@ -273,6 +273,7 @@ export function loadRollScreen() {
                 rollButton.disabled = false;
             }, 1250);
         } catch (error) {
+            showToast(error);
             console.error(error);
             rollButton.disabled = false;
         }
