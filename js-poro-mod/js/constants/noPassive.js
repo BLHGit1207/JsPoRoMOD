@@ -1,6 +1,5 @@
 // List of Pokémon IDs that have no passive attributes
 export const noPassive = [
-    "25",
     "35",
     "39",
     "106",

@@ -112,6 +112,19 @@ const Achievements = {
     MONO_DRAGON: 64,
     MONO_DARK: 65,
     MONO_FAIRY: 66,
+    UNEVOLVED_CLASSIC_VICTORY: 67, // Bring Your Child To Work Day
+    FRESH_START: 68, // First Try!
+    INVERSE_BATTLE: 69, // Mirror rorriM
+    BREEDERS_IN_SPACE: 70, // Hmmmmm?
+    TRANSFER_MAX_STAT_STAGE: 71, // Teamwork
+    FLIP_STATS: 72,
+    FLIP_INVERSE: 73,
+    DAILY_VICTORY: 74,
+    LIMITED_CATCH: 75,
+    LIMITED_SUPPORT: 76,
+    HARDCORE: 77,
+    NUZLOCKE: 78,
+    PASSIVES_CHALLENGE: 79,
 };
 
 class BaseScene {
@@ -140,9 +153,9 @@ class BaseScene {
 
     maxTeamLuck() {
         this.currentPhase.scene.getParty().forEach((pokemon) => {
-            pokemon.luck = 11;
+            pokemon.luck = 14;
         });
-        // console.log("Set all player Pokémon luck to 11!");
+        // console.log("Set all player Pokémon luck to 14!");
     }
 
     setMoney(value) {

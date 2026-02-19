@@ -13,18 +13,18 @@ const IVS = [
 const SEENATTR = BigInt(Number.MAX_SAFE_INTEGER);
 const CAUGHTATTR = BigInt(Number.MAX_SAFE_INTEGER);
 
-const SEEN_COUNT = 999;
-const CAUGHT_COUNT = 999;
-const HATCHED_COUNT = 999;
+const SEEN_COUNT = 9999;
+const CAUGHT_COUNT = 9999;
+const HATCHED_COUNT = 9999;
 
-const CANDY_COUNT = 999;
+const CANDY_COUNT = 9999;
 const FRIENDSHIP = 255;
-const VALUE_REDUCTION = 0;
+const VALUE_REDUCTION = 2;
 // ========================== Customize End ==========================
 
 // List of Pokémon indices that should have passiveAttr set to 0
 const noPassive = new Set([
-  25, 35, 39, 106, 107, 113, 122, 124, 125, 126, 143, 183, 185, 202, 226, 315,
+  35, 39, 106, 107, 113, 122, 124, 125, 126, 143, 183, 185, 202, 226, 315,
   358, 4122,
 ]);
 

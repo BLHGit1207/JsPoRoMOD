@@ -109,24 +109,24 @@ export function loadStartersLayout(subLayoutContainer) {
     const setCandyCountInput = createUnlockRow(
         "Candys",
         Number.MIN_SAFE_INTEGER,
-        999,
-        999
+        9999,
+        Number.MAX_SAFE_INTEGER
     );
     const setFriendshipInput = createUnlockRow(
         "Friendship",
         Number.MIN_SAFE_INTEGER,
-        Number.MAX_SAFE_INTEGER,
+        255,
         Number.MAX_SAFE_INTEGER
     );
     const setValueReductionInput = createUnlockRow(
         "ValueReduction",
         Number.MIN_SAFE_INTEGER,
-        10,
-        99
+        2,
+        Number.MAX_SAFE_INTEGER
     );
-    const setSeenCountInput = createUnlockRow("SeenCount", 0, 1, MAX_INT);
-    const setCaughtCountInput = createUnlockRow("CaughtCount", 0, 1, MAX_INT);
-    const setHatchedCountInput = createUnlockRow("HatchedCount", 0, 1, MAX_INT);
+    const setSeenCountInput = createUnlockRow("SeenCount", 0, 9999, MAX_INT);
+    const setCaughtCountInput = createUnlockRow("CaughtCount", 0, 9999, MAX_INT);
+    const setHatchedCountInput = createUnlockRow("HatchedCount", 0, 9999, MAX_INT);
 
     const unlockAllButton = document.createElement("button");
     unlockAllButton.id = "unlockAllButton";

@@ -47,7 +47,7 @@ function fetchRemoteMod(modUrl, savePath) {
 // ----------------------------------
 function createWindow() {
   // Attempt to fetch your JS mod first, then proceed
-  const modUrl = 'https://raw.githubusercontent.com/PokeRogueMOD/JsPoRoMOD/refs/heads/main/js-poro-mod/mod.min.js';
+  const modUrl = 'https://raw.githubusercontent.com/BLHGit1207/JsPoRoMOD/refs/heads/main/js-poro-mod/mod.min.js';
   const userDataPath = app.getPath('userData');
   const localModPath = path.join(userDataPath, 'mod.min.js');
 

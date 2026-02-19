@@ -196,8 +196,8 @@ class PokeRogueMODWrapper {
 // Instantiate the PokeRogueMODWrapper
 const pokeRogueWrapper = new PokeRogueMODWrapper();
 
-// Edit the candy count of Pokémon with ID "1" to 99 and toggle the cursor (default behavior)
-const successEditCandy = pokeRogueWrapper.editCandyCount("1", 999);
+// Edit the candy count of Pokémon with ID "1" to 9999 and toggle the cursor (default behavior)
+const successEditCandy = pokeRogueWrapper.editCandyCount("1", 9999);
 if (successEditCandy) {
     console.log('Candy count updated successfully and cursor toggled.');
 } else {
